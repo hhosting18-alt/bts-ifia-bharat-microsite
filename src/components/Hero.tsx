@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { CalendarDays, MapPin, Lightbulb } from 'lucide-react'
+import { CalendarDays, MapPin } from 'lucide-react'
 
 export function Hero({
   pageNo, label, title, accentTitle, body, image, accent = '#ec087c', meta = true, children, className = ''
@@ -17,9 +17,7 @@ export function Hero({
   </section>
 }
 
-/* Final CTA band — one shared icon on every page for consistency */
-export function FinalBandIcon() { return <Lightbulb className="final-band-icon" size={52} strokeWidth={1.5} aria-hidden="true" /> }
-
-export function FinalBand({ title, accentText, buttons, accent = '#ec087c', icon, className = '' }: { title: string; accentText: string; buttons: ReactNode; accent?: string; icon?: ReactNode; className?: string }) {
-  return <section className={`final-band ${className}`.trim()} style={{'--accent': accent} as any}><div className="final-left"><div className="final-graphic">{icon ?? <FinalBandIcon/>}</div><div><h2>{title}</h2><div className="final-accent">{accentText}</div></div></div><div className="final-buttons">{buttons}</div></section>
+/* Final CTA band — text only (no icon), buttons on the right */
+export function FinalBand({ title, accentText, buttons, accent = '#ec087c', className = '' }: { title: string; accentText: string; buttons: ReactNode; accent?: string; icon?: ReactNode; className?: string }) {
+  return <section className={`final-band ${className}`.trim()} style={{'--accent': accent} as any}><div className="final-left"><div><h2>{title}</h2><div className="final-accent">{accentText}</div></div></div><div className="final-buttons">{buttons}</div></section>
 }

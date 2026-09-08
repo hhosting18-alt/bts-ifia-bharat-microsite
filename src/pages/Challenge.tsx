@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-  ChevronDown, ChevronUp, ArrowRight, Lightbulb, Target, Globe2,
+  ChevronDown, ArrowRight, Lightbulb, Target, Globe2,
   Store, UsersRound, Trophy, CalendarDays, Search, Star, CheckCircle2, Landmark, Droplets, Leaf, HeartPulse, Bot, Cpu, ShieldCheck, CarFront, Factory, Clock3
 } from 'lucide-react'
 import { Hero, FinalBand } from '../components/Hero'
@@ -60,6 +60,7 @@ export function Challenge() {
             {sectors.map(s => (
               <button
                 key={s.id}
+                type="button"
                 onClick={() => setOpen(s.id)}
                 className={`sector-tile ${open === s.id ? 'selected' : ''}`}
                 style={{'--sector': s.color} as React.CSSProperties}
@@ -70,37 +71,47 @@ export function Challenge() {
               </button>
             ))}
           </div>
-
         </div>
 
         <div className="accordion-panel">
           <h3>EXPLORE THE CHALLENGES</h3>
-          <p>Click on a sector to view the challenge statements.</p>
+          <p>Select a sector to view its challenge statements.</p>
 
-          {sectors.map(s => (
-            <div className={`accordion ${open === s.id ? 'open' : ''}`} key={s.id}>
-              <button onClick={() => setOpen(open === s.id ? '' : s.id)} aria-expanded={open === s.id}>
-                <span className="acc-no" style={{color:s.color}}>{s.id}</span>
-                <span>{s.title.toUpperCase()}</span>
-                {open === s.id ? <ChevronUp size={15}/> : <ChevronDown size={15}/>}
-              </button>
+          <div className="accordion-list">
+            {sectors.map(s => {
+              const isOpen = open === s.id
+              const panelId = `sector-panel-${s.id}`
+              return (
+                <div className={`accordion ${isOpen ? 'open' : ''}`} key={s.id} style={{'--sector': s.color} as React.CSSProperties}>
+                  <button
+                    type="button"
+                    className="acc-toggle"
+                    onClick={() => setOpen(isOpen ? '' : s.id)}
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                  >
+                    <span className="acc-no" style={{color:s.color}}>{s.id}</span>
+                    <span className="acc-title">{s.title.toUpperCase()}</span>
+                    <span className="acc-chevron" aria-hidden="true"><ChevronDown size={18}/></span>
+                  </button>
 
-              {open === s.id && (
-                <div className="acc-content">
-                  {s.challenges.map(c => (
-                    <div className="challenge-entry" key={c.code}>
-                      <div className="challenge-entry-title">
-                        <span className="challenge-code">GIC-C2I-2026-{c.code}</span>
-                        <b>{c.title}</b>
-                      </div>
-                      <p>{c.question}</p>
+                  {isOpen && (
+                    <div className="acc-content" id={panelId}>
+                      {s.challenges.map(c => (
+                        <article className="challenge-entry" key={c.code}>
+                          <div className="challenge-entry-title">
+                            <span className="challenge-code">GIC-C2I-2026-{c.code}</span>
+                            <b>{c.title}</b>
+                          </div>
+                          <p>{c.question}</p>
+                        </article>
+                      ))}
                     </div>
-                  ))}
+                  )}
                 </div>
-              )}
-            </div>
-          ))}
-
+              )
+            })}
+          </div>
         </div>
       </section>
 

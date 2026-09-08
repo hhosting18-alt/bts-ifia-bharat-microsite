@@ -12,7 +12,7 @@ const reasons = [
 
 export function Exhibition() {
   return <>
-    <Hero pageNo="02" label="EXHIBITION" image="/assets/heroes/hero3.png" title="GLOBAL INVENTION &" accentTitle="INNOVATION EXHIBITION" accent="#ec087c" body={<><div className="hero-subtag">SHOWCASE. CONNECT. INSPIRE THE WORLD.</div><p>Bring your existing invention or innovation to Bengaluru Tech Summit 2026 — Asia’s largest integrated technology event — and connect with innovators, researchers, industry and technology leaders from India and around the world.</p></>} meta={true}>
+    <Hero pageNo="02" label="EXHIBITION" image="/assets/heroes/hero3.png" title="GLOBAL INVENTION &" accentTitle="INNOVATION EXHIBITION" accent="#ec087c" body={<><div className="hero-subtag">SHOWCASE. CONNECT. INSPIRE THE WORLD.</div><p>Bring your existing invention or innovation to Bengaluru Tech Summit 2026 — Asia’s largest integrated technology event and connect with innovators, researchers, industry and technology leaders from India and around the world.</p></>} meta={true}>
       <PrimaryButton to="https://forms.gle/yuMsrN4br883syaE9" programme="exhibition">SUBMIT YOUR INVENTION / INNOVATION</PrimaryButton>
     </Hero>
     <main className="page exhibition-page">
