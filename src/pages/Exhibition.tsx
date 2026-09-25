@@ -48,7 +48,7 @@ export function Exhibition() {
           <div className="callout gold awards-callout"><div>Selection is based on the merit of the invention and the information and evidence provided. Submission does not guarantee exhibition participation. Only shortlisted inventions will be <b>invited to exhibit.</b></div></div>
         </div>
       </section>
-      <section className="dates-panel"><SectionTitle>KEY DATES</SectionTitle><div className="timeline three"><DateStep date="10 SEP 2026" title="Applications Open"/><DateStep date="10 OCT 2026" title="Application Deadline"/><DateStep date="17–19 NOV 2026" title="Global Invention & Innovation Exhibition · Bengaluru Tech Summit 2026"/></div></section>
+      <section className="dates-panel"><SectionTitle>KEY DATES</SectionTitle><div className="timeline three"><DateStep date="27 SEP 2026" title="Applications Open"/><DateStep date="15 OCT 2026" title="Application Deadline"/><DateStep date="17–19 NOV 2026" title="Global Invention & Innovation Exhibition · Bengaluru Tech Summit 2026"/></div></section>
     </main>
     <FinalBand title="HAVE AN INVENTION OR INNOVATION TO SHOWCASE?" accentText="BRING IT TO THE GLOBAL STAGE." accent="#ec087c" buttons={<PrimaryButton to="https://forms.gle/yuMsrN4br883syaE9" programme="exhibition">SUBMIT YOUR INVENTION / INNOVATION</PrimaryButton>}/>
     <Footer label="Global Invention & Innovation Exhibition"/>
