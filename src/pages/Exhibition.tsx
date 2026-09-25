@@ -32,7 +32,7 @@ export function Exhibition() {
         <div className="white-card exhibit-card">
           <SectionTitle>POD / STALL AT BTS 2026</SectionTitle>
           <div className="lead-row lead-row-stall">
-            <div className="stall-illustration" aria-hidden="true"><svg viewBox="0 0 110 100" role="img"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 39h84L88 14H22z"/><path d="M18 39v46h74V39"/><path d="M31 85V56h48v29"/><path d="M22 96h66"/><circle cx="44" cy="55" r="5"/><circle cx="66" cy="55" r="5"/><path d="M40 72c2-7 6-10 10-10s8 3 10 10M62 72c2-7 6-10 10-10s8 3 10 10"/></g></svg></div>
+            <div className="stall-illustration" aria-hidden="true"><svg viewBox="0 0 110 100" role="img"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 39h84L88 14H22z"/><path d="M18 39v46h74V39"/><path d="M31 85V56h48v29"/><path d="M22 96h66"/><circle cx="45" cy="64" r="4.5"/><circle cx="65" cy="64" r="4.5"/><path d="M37 80c0-6 4-9 8-9s8 3 8 9M57 80c0-6 4-9 8-9s8 3 8 9"/></g></svg></div>
             <p>Selected exhibitors will take a POD / stall to display and demonstrate their invention at BTS 2026.</p>
           </div>
           <div className="display-grid"><MiniUse icon={<Building2/>} text="DISPLAY"/><MiniUse icon={<MonitorUp/>} text="DEMONSTRATE"/><MiniUse icon={<UsersRound/>} text="CONNECT"/></div>
