@@ -127,8 +127,6 @@ export function Challenge() {
           <DateStep date="27 SEP 2026" title="Applications Open" icon={<CalendarDays/>}/>
           <DateStep date="15 OCT 2026" title="Application Deadline" icon={<CalendarDays/>}/>
           <DateStep date="20 OCT 2026" title="Expert & Jury Evaluation" icon={<Search/>}/>
-          <DateStep date="24–28 OCT 2026" title="Final Selection" icon={<Star/>}/>
-          <DateStep date="29–31 OCT 2026" title="Selected Solution Confirmation" icon={<CheckCircle2/>}/>
           <DateStep date="17–19 NOV 2026" title="Bengaluru Tech Summit (Exhibition)" icon={<Landmark/>}/>
         </div>
       </section>

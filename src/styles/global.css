@@ -858,3 +858,6 @@ img,svg{max-width:100%}
   .participant{border-right:none!important}
   .footer-logos img{max-width:30%!important}
 }
+
+/* Challenge key dates — 4 steps */
+@media (min-width:821px){.challenge-page .timeline.five{grid-template-columns:repeat(4,1fr)}.challenge-page .timeline.five:before{left:12.5%;right:12.5%}}
